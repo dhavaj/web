@@ -1,0 +1,833 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dhavaj Agarwal | Portfolio</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #101d32;
+    color: #ffffff;
+    line-height: 1.8;
+}
+
+/* NAVIGATION */
+
+nav {
+    background-color: #101d32;
+    border-bottom: 1px solid #34445c;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+nav ul {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #c5d1e0;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* HERO */
+
+.hero {
+    padding: 110px 10%;
+    border-bottom: 1px solid #34445c;
+}
+
+.hero .tag {
+    color: #91b9e8;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin: 20px 0 10px;
+}
+
+.hero h1 span {
+    color: #91b9e8;
+}
+
+.hero h2 {
+    font-size: 19px;
+    font-weight: normal;
+    color: #c5d1e0;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    color: #b8c5d6;
+    font-size: 15px;
+}
+
+.hero a {
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #91b9e8;
+    padding: 10px 22px;
+    font-size: 13px;
+}
+
+.hero a:hover {
+    background-color: #243b5a;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 75px 10%;
+    border-bottom: 1px solid #34445c;
+}
+
+.section-number {
+    color: #91b9e8;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+h2.section-title {
+    font-size: 32px;
+    margin: 8px 0 20px;
+    color: #ffffff;
+}
+
+.section-description {
+    color: #b8c5d6;
+    max-width: 750px;
+    margin-bottom: 30px;
+}
+
+/* PROFILE */
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 50px;
+}
+
+.profile-text p {
+    margin-bottom: 18px;
+    color: #c5d1e0;
+    font-size: 15px;
+}
+
+.info-card {
+    border: 1px solid #34445c;
+    padding: 25px;
+}
+
+.info-card h3 {
+    color: #91b9e8;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    border-bottom: 1px solid #34445c;
+    padding: 12px 0;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item small {
+    color: #91b9e8;
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.info-item p {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* EDUCATION */
+
+.education-card {
+    border-left: 3px solid #91b9e8;
+    padding: 15px 25px;
+    margin-bottom: 35px;
+}
+
+.education-card h3 {
+    font-size: 20px;
+}
+
+.education-card .year {
+    color: #91b9e8;
+    font-size: 13px;
+}
+
+.education-card p {
+    color: #b8c5d6;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.subheading {
+    font-size: 19px;
+    color: #91b9e8;
+    margin-bottom: 15px;
+}
+
+.clean-list {
+    list-style: none;
+}
+
+.clean-list li {
+    padding: 7px 0;
+    color: #c5d1e0;
+    font-size: 14px;
+    border-bottom: 1px solid #293950;
+}
+
+/* EXPERIENCE */
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.experience-card {
+    border: 1px solid #34445c;
+    padding: 28px;
+}
+
+.experience-card h3 {
+    color: #91b9e8;
+    font-size: 21px;
+    margin: 10px 0;
+}
+
+.experience-card p {
+    color: #b8c5d6;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.card-number {
+    color: #91b9e8;
+    font-size: 13px;
+}
+
+/* INTERESTS */
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.interest-item {
+    border: 1px solid #34445c;
+    padding: 17px 10px;
+    text-align: center;
+    color: #d5dfec;
+    font-size: 14px;
+}
+
+/* SKILLS */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.skill-card {
+    border: 1px solid #34445c;
+    padding: 25px;
+}
+
+.skill-card h3 {
+    color: #91b9e8;
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.skill-card ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.skill-card ul li {
+    padding: 4px 0;
+    color: #c5d1e0;
+    font-size: 14px;
+    border-bottom: none;
+}
+
+/* AMBITION */
+
+.ambition {
+    text-align: center;
+}
+
+.ambition-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.ambition-content p {
+    color: #c5d1e0;
+    margin-bottom: 20px;
+}
+
+.ambition-tags {
+    color: #91b9e8;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: 30px;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact-content p {
+    color: #b8c5d6;
+    margin-bottom: 20px;
+}
+
+.email {
+    color: #91b9e8;
+    font-size: 19px;
+    text-decoration: none;
+}
+
+.contact-details {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #b8c5d6;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #91a0b5;
+    font-size: 12px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .profile-grid,
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .interests-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    section {
+        padding: 55px 7%;
+    }
+
+    .hero {
+        padding: 75px 7%;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    h2.section-title {
+        font-size: 27px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">Dhavaj Agarwal</div>
+
+    <ul>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#academics">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="tag">Undergraduate · IIM Bangalore</div>
+
+    <h1>Dhavaj Agarwal</h1>
+
+    <h2>BBA-DBE Undergraduate | Finance | Marketing | Entrepreneurship</h2>
+
+    <p>
+        An undergraduate student at IIM Bangalore with interests in
+        finance, marketing, entrepreneurship and business development.
+        Coming from a family with a long-standing business background,
+        I have developed an interest in understanding businesses,
+        financial markets and investment opportunities.
+    </p>
+
+    <a href="#profile">Explore My Profile</a>
+    <a href="mailto:dhavajslg@gmail.com">Contact Me</a>
+
+</header>
+
+<!-- 01 PROFILE -->
+
+<section id="profile">
+
+    <div class="section-number">01 · PROFILE</div>
+    <h2 class="section-title">About</h2>
+
+    <div class="profile-grid">
+
+        <div class="profile-text">
+
+            <h3 class="subheading">Background, Upbringing & Direction</h3>
+
+            <p>
+                I was born and brought up in Siliguri, West Bengal,
+                in a family with a long-standing business background,
+                with entrepreneurship and trade being carried forward
+                through generations.
+            </p>
+
+            <p>
+                Although I initially had limited interest in business,
+                as I grew older, my curiosity gradually developed towards
+                entrepreneurship, finance, marketing, investing and
+                financial markets.
+            </p>
+
+            <p>
+                During my school years, I participated in several
+                entrepreneurial activities, both within school and
+                outside, which strengthened my interest in business
+                and understanding how organisations operate and grow.
+            </p>
+
+            <p>
+                After completing school, I wanted an educational path
+                that would allow me to gain business knowledge while
+                retaining the flexibility to explore practical
+                opportunities and personal interests. This led me
+                to discover the BBA in Digital Business and
+                Entrepreneurship programme at IIM Bangalore.
+            </p>
+
+        </div>
+
+        <div class="info-card">
+
+            <h3>At a Glance</h3>
+
+            <div class="info-item">
+                <small>Location</small>
+                <p>Siliguri, West Bengal, India</p>
+            </div>
+
+            <div class="info-item">
+                <small>Undergraduate Study</small>
+                <p>BBA-DBE, 2026–2029</p>
+            </div>
+
+            <div class="info-item">
+                <small>Professional Development</small>
+                <p>CFA – Pursuing</p>
+            </div>
+
+            <div class="info-item">
+                <small>Interests</small>
+                <p>Finance, Marketing, Investing & Entrepreneurship</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 02 ACADEMICS -->
+
+<section id="academics">
+
+    <div class="section-number">02 · ACADEMICS</div>
+    <h2 class="section-title">Education</h2>
+
+    <p class="section-description">
+        Academic background and professional development.
+    </p>
+
+    <div class="education-card">
+
+        <div class="year">2026–2029</div>
+
+        <h3>Indian Institute of Management Bangalore</h3>
+
+        <p>
+            Bachelor of Business Administration in Digital Business
+            and Entrepreneurship (BBA-DBE)
+        </p>
+
+    </div>
+
+    <div class="two-column">
+
+        <div>
+
+            <h3 class="subheading">Academic Focus</h3>
+
+            <ul class="clean-list">
+                <li>Financial Management and Analysis</li>
+                <li>Marketing Fundamentals</li>
+                <li>Entrepreneurship and Business Development</li>
+                <li>Digital Business</li>
+                <li>Business Strategy</li>
+                <li>Financial Markets</li>
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3 class="subheading">Professional Development</h3>
+
+            <p><strong>CFA – Pursuing</strong></p>
+
+            <p class="section-description">
+                Developing knowledge of financial markets,
+                investment analysis and financial management
+                alongside undergraduate studies.
+            </p>
+
+            <h3 class="subheading">School Education</h3>
+
+            <ul class="clean-list">
+                <li>Class X – 88%</li>
+                <li>Class XII – 92%</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 03 EXPERIENCE -->
+
+<section id="experience">
+
+    <div class="section-number">03 · INDUSTRY EXPOSURE</div>
+    <h2 class="section-title">Experience</h2>
+
+    <p class="section-description">
+        Business exposure across industries.
+    </p>
+
+    <div class="experience-grid">
+
+        <div class="experience-card">
+
+            <div class="card-number">01</div>
+
+            <h3>Musical Instruments Industry</h3>
+
+            <p>
+                Exposure through my own company in the musical
+                instruments industry, developing an understanding
+                of the commercial and operational aspects of the sector.
+            </p>
+
+            <ul class="clean-list">
+                <li>Musical instruments and product markets</li>
+                <li>Customer requirements and product positioning</li>
+                <li>Sales and business development</li>
+                <li>Market demand and commercial opportunities</li>
+                <li>Business operations and industry dynamics</li>
+            </ul>
+
+        </div>
+
+        <div class="experience-card">
+
+            <div class="card-number">02</div>
+
+            <h3>Tea Industry</h3>
+
+            <p>
+                An interest in the tea industry's business ecosystem,
+                production and commercial opportunities.
+            </p>
+
+            <ul class="clean-list">
+                <li>Tea production and processing</li>
+                <li>Industry supply chains</li>
+                <li>Market dynamics and distribution</li>
+                <li>Business development</li>
+                <li>Trade opportunities</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 04 INTERESTS -->
+
+<section id="interests">
+
+    <div class="section-number">04 · BEYOND CLASS</div>
+    <h2 class="section-title">Interests & Activities</h2>
+
+    <p class="section-description">
+        Sports, recreation and personal interests.
+    </p>
+
+    <h3 class="subheading">Sports & Recreation</h3>
+
+    <div class="interests-grid">
+        <div class="interest-item">Table Tennis</div>
+        <div class="interest-item">Badminton</div>
+        <div class="interest-item">Snooker</div>
+        <div class="interest-item">Tennis</div>
+    </div>
+
+    <br><br>
+
+    <h3 class="subheading">Business & Finance</h3>
+
+    <div class="interests-grid">
+        <div class="interest-item">Financial Markets</div>
+        <div class="interest-item">Investment Research</div>
+        <div class="interest-item">Marketing & Branding</div>
+        <div class="interest-item">Entrepreneurship</div>
+    </div>
+
+</section>
+
+<!-- 05 SKILLS -->
+
+<section id="skills">
+
+    <div class="section-number">05 · CAPABILITIES</div>
+    <h2 class="section-title">Skills</h2>
+
+    <p class="section-description">
+        Practical abilities and developing competencies.
+    </p>
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+
+            <h3>Communication</h3>
+
+            <ul>
+                <li>Verbal and written communication</li>
+                <li>Interpersonal communication</li>
+                <li>Professional interaction</li>
+                <li>Collaboration</li>
+            </ul>
+
+        </div>
+
+        <div class="skill-card">
+
+            <h3>Data & Digital Tools</h3>
+
+            <ul>
+                <li>Microsoft Excel</li>
+                <li>Data Management</li>
+                <li>Data Organisation and Analysis</li>
+                <li>Spreadsheet Management</li>
+            </ul>
+
+        </div>
+
+        <div class="skill-card">
+
+            <h3>Business & Analytical</h3>
+
+            <ul>
+                <li>Business Awareness</li>
+                <li>Financial and Market Research</li>
+                <li>Marketing Fundamentals</li>
+                <li>Entrepreneurial Thinking</li>
+                <li>Understanding Business Operations</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 06 AMBITION -->
+
+<section id="ambition" class="ambition">
+
+    <div class="section-number">06 · AMBITION</div>
+
+    <h2 class="section-title">Where I'm Headed</h2>
+
+    <div class="ambition-content">
+
+        <p>
+            My ambition is to become a successful businessman and
+            entrepreneur, building businesses that create long-term
+            value and contribute meaningfully to their industries.
+        </p>
+
+        <p>
+            I aim to combine academic knowledge, practical industry
+            exposure, financial understanding and entrepreneurial
+            thinking to identify opportunities, develop business ideas
+            and turn them into successful ventures.
+        </p>
+
+        <div class="ambition-tags">
+            ENTREPRENEURSHIP · FINANCE · MARKETING · BUSINESS DEVELOPMENT
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 07 CONTACT -->
+
+<section id="contact" class="contact">
+
+    <div class="section-number">07 · CONNECT</div>
+
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact-content">
+
+        <p>
+            Open to internship opportunities, entrepreneurial
+            collaborations, business networking, professional
+            conversations and learning opportunities.
+        </p>
+
+        <a class="email" href="mailto:dhavajslg@gmail.com">
+            dhavajslg@gmail.com
+        </a>
+
+        <div class="contact-details">
+
+            <p>LOCATION: Siliguri, West Bengal, India</p>
+
+            <p>INSTITUTION: Indian Institute of Management Bangalore</p>
+
+            <p>Dhavaj Agarwal</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    Dhavaj Agarwal | Siliguri, West Bengal, India<br>
+    © 2026 All Rights Reserved
+</footer>
+
+</body>
+</html>
